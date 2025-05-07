@@ -28,7 +28,7 @@ export function AuthProvider({ children }) {
     const [authToken, setAuthToken] = useState(null);
 
     // create new user with email and password
-    async function signup(email, password, firstName, lastName) {
+    async function signup(email, password, firstName, lastName, bvn) {
     try {
     //create user in firebase auth
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
@@ -44,6 +44,7 @@ export function AuthProvider({ children }) {
         firstName,
         lastName,
         email,
+        bvn,
         role: "customer", // this is the default role
         createdAt: new Date(),
         accountNumber: generateAccountNumber(),
