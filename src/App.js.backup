@@ -33,21 +33,21 @@ function App() {
           <Route path="/unauthorized" element={<Unauthorized />} />
           
           {/* Protected Routes for Authenticated Users */}
-          <Route path="/login" element={<Login />} />
-          <Route element={<PrivateRoute /> }>
-            <Route path="/dashboard" element={<Dashboard />} />
-          </Route>
-
-          <Route path="/login" element={<Login />} />
-          <Route element={<PrivateRoute /> }>
-            <Route path="/account" element={<AccountDetails />} />
-          </Route>
-
-          <Route path="/login" element={<Login />} />
-          <Route element={<PrivateRoute /> }>
-            <Route path="/transfer" element={<TransferFunds />} />
-          </Route>
-
+          <Route path="/dashboard" element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          } />
+          <Route path="/account" element={
+            <PrivateRoute>
+              <AccountDetails />
+            </PrivateRoute>
+          } />
+          <Route path="/transfer" element={
+            <PrivateRoute>
+              <TransferFunds />
+            </PrivateRoute>
+          } />
           
           {/* Routes for Admin Users */}
           <Route path="/admin" element={
