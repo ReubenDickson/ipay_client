@@ -5,13 +5,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBz04kWGUorfz29DgNg3VY78czj3-kzF8M",
-  authDomain: "ipay-a3717.firebaseapp.com",
-  projectId: "ipay-a3717",
-  storageBucket: "ipay-a3717.firebasestorage.app",
-  messagingSenderId: "239382298826",
-  appId: "1:239382298826:web:69dbac6acdcb9fdbc33433",
-  measurementId: "G-F2GGT51WF5"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
